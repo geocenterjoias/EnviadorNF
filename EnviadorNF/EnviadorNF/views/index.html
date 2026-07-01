@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geo Center - Enviador NF</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+
+    width:420px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.1);
+
+}
+
+h1{
+
+    text-align:center;
+    color:#b58a35;
+    margin-bottom:30px;
+
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    box-sizing:border-box;
+
+}
+
+button{
+
+    width:100%;
+    padding:14px;
+    background:#b58a35;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Geo Center</h1>
+
+    <form action="/enviar" method="POST" enctype="multipart/form-data">
+
+        <input
+            type="text"
+            name="cliente"
+            placeholder="Nome do Cliente"
+            required>
+
+        <input
+            type="text"
+            name="telefone"
+            placeholder="31999999999"
+            required>
+
+        <input
+            type="file"
+            name="pdf"
+            accept=".pdf"
+            required>
+
+        <button type="submit">
+            Enviar Nota Fiscal
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
