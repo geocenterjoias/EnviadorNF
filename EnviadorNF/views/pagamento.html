@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagamento - Geo Center</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="card">
+    <a class="voltar" href="/menu">← Voltar</a>
+    <h1>Geo Center</h1>
+    <h3>Enviar Link de Pagamento</h3>
+
+    <form method="POST" action="/pagamento">
+        <input name="cliente" placeholder="Nome do Cliente" required>
+        <input name="telefone" placeholder="WhatsApp" required>
+        <input name="link" placeholder="Cole aqui o link de pagamento" required>
+        <button type="submit">Enviar Link</button>
+    </form>
+</div>
+</body>
+</html>

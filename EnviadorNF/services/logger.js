@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const caminho = path.join(__dirname, "..", "historico.json");
+const HISTORICO_PATH = path.join(__dirname, "..", "historico.json");
 
 function salvarHistorico(dados) {
     let historico = [];
 
-    if (fs.existsSync(caminho)) {
+    if (fs.existsSync(HISTORICO_PATH)) {
         try {
-            historico = JSON.parse(fs.readFileSync(caminho, "utf8"));
+            historico = JSON.parse(fs.readFileSync(HISTORICO_PATH, "utf8"));
         } catch {
             historico = [];
         }
@@ -19,14 +19,14 @@ function salvarHistorico(dados) {
         ...dados
     });
 
-    fs.writeFileSync(caminho, JSON.stringify(historico, null, 2));
+    fs.writeFileSync(HISTORICO_PATH, JSON.stringify(historico, null, 2));
 }
 
 function listarHistorico() {
-    if (!fs.existsSync(caminho)) return [];
+    if (!fs.existsSync(HISTORICO_PATH)) return [];
 
     try {
-        return JSON.parse(fs.readFileSync(caminho, "utf8"));
+        return JSON.parse(fs.readFileSync(HISTORICO_PATH, "utf8"));
     } catch {
         return [];
     }
