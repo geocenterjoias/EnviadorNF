@@ -65,6 +65,8 @@ Segue em anexo a sua Nota Fiscal referente à sua compra na Geo Center Joias.
 
 Em caso de dúvidas, nossa equipe está à disposição.
 
+Agradecemos pela sua compra!
+
 Muito obrigado pela preferência.`;
 
         const url = `${process.env.EVOLUTION_URL}/message/sendMedia/${process.env.EVOLUTION_INSTANCE}`;
