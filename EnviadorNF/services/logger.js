@@ -15,7 +15,9 @@ function salvarHistorico(dados) {
     }
 
     historico.unshift({
-        data: new Date().toLocaleString("pt-BR"),
+        data: new Date().toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo"
+}),
         ...dados
     });
 
