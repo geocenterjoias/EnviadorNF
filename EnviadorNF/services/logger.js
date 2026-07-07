@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const HISTORICO_PATH = path.join(__dirname, "..", "historico.json");
+const HISTORICO_PATH = process.env.HISTORICO_PATH || path.join(__dirname, "..", "historico.json");
 
 function salvarHistorico(dados) {
     let historico = [];
